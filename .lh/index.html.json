@@ -1,0 +1,18 @@
+{
+    "sourceFile": "index.html",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1757953899614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1757953899614,
+            "name": "Commit-0",
+            "content": "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <link href=\"style.css\" rel=\"stylesheet\">\n  <title>крестики-нолики</title>\n</head>\n\n<body>\n  <main>\n    <div class=\"blockwo\">\n      <div class=\"Text\">Ход: <span id=\"spanwo\"></span></div>\n    </div>\n\n    <div class=\"blockArea\" id=\"blockArea\">\n      <div class=\"blockItem\">1</div>\n      <div class=\"blockItem\">2</div>\n      <div class=\"blockItem\">3</div>\n\n      <div class=\"blockItem\">4</div>\n      <div class=\"blockItem\">5</div>\n      <div class=\"blockItem\">6</div>\n\n      <div class=\"blockItem\">7</div>\n      <div class=\"blockItem\">8</div>\n      <div class=\"blockItem\">9</div>\n    </div>\n\n    <div class=\"blokWinner\" id=\"blokWinner\">\n      <div class=\"textWin\">Победитель: <span id=\"spanWin\"></span></div>\n      <div class=\"btnNewGame\" id=\"btnNewGame\">Новая игра</div>\n    </div>\n\n\n\n\n\n  </main>\n\n</body>\n\n</html>"
+        }
+    ]
+}

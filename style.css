@@ -33,23 +33,54 @@ main {
   height: 140px;
   padding: 8px;
   margin: 5px;
+  border-radius: 24px;
+}
+
+
+.blockItem:hover {
+  background: rgb(174, 174, 174);
+}
+.krest {
+  color: rgb(135, 220, 250);
+  font-size: 38px;
+  display: flex;
+  justify-content: center;
+}
+.circle {
+  color: rgb(135, 250, 135);
+  font-size: 38px;
+  display: flex;
+  justify-content: center;
+}
+.winColor {
+  color: rgb(21, 168, 21);
+  background: gold;
+  font-size: 50px;
+  font-weight: 900;
 }
 
 .blokWinner {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
 }
 .textWin {
   font-size: 25px;
+  margin-bottom: 12px;
+}
+#spanWin{
+  font-size: 24px;
   color: gold;
 }
 .btnNewGame {
-  color: white;
-  background: rgb(61, 185, 61);
-  border-radius: 12px;
   padding: 12px;
+  color: white;
+  background: rgb(55, 196, 55);
+  border-radius: 12px;
   font-weight: 600;
   cursor: pointer;
   text-align: center;
 }
-.blockItem:hover {
-  background: rgb(174, 174, 174);
+.btnNewGame:hover{
+  background: rgb(98, 222, 98);
 }
