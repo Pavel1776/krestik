@@ -1,0 +1,35 @@
+main {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+}
+.blockwo {
+  padding: 25px;
+}
+.spanwo {
+  color: greenyellow;
+  font-weight: 600;
+  font-size: 24px;
+}
+.blockArea {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blokWinner{
+  
+}
+.textWin{
+
+}
+.btnNewGame {
+  color: white;
+  background: rgb(61, 185, 61);
+  border-radius: 12px;
+  padding: 12px;
+  font-weight: 600;
+}
