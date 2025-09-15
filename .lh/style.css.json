@@ -1,0 +1,118 @@
+{
+    "sourceFile": "style.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 25,
+            "patches": [
+                {
+                    "date": 1757930894101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1757930960755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,5 +32,6 @@\n   border-radius: 12px;\n   padding: 12px;\n   font-weight: 600;\n   cursor: pointer;\n+  text-align: center;\n }\n"
+                },
+                {
+                    "date": 1757931223531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,13 +19,12 @@\n   height: 500px;\n   margin-left: auto;\n   margin-right: auto;\n }\n-.blokWinner{\n-  \n+.blokWinner {\n }\n-.textWin{\n-\n+.textWin {\n+  font-size: 25px;\n }\n .btnNewGame {\n   color: white;\n   background: rgb(61, 185, 61);\n"
+                },
+                {
+                    "date": 1757931241127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,8 +23,9 @@\n .blokWinner {\n }\n .textWin {\n   font-size: 25px;\n+  color: gold;\n }\n .btnNewGame {\n   color: white;\n   background: rgb(61, 185, 61);\n"
+                },
+                {
+                    "date": 1757931341394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,4 +34,7 @@\n   font-weight: 600;\n   cursor: pointer;\n   text-align: center;\n }\n+.btnNewGame:hover{\n+  \n+}\n"
+                },
+                {
+                    "date": 1757931386450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n   margin-left: auto;\n   margin-right: auto;\n }\n .blokWinner {\n+  \n }\n .textWin {\n   font-size: 25px;\n   color: gold;\n@@ -35,6 +36,6 @@\n   cursor: pointer;\n   text-align: center;\n }\n .btnNewGame:hover{\n-  \n+\n }\n"
+                },
+                {
+                    "date": 1757931512170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,17 +12,20 @@\n   color: greenyellow;\n   font-weight: 600;\n   font-size: 24px;\n }\n+.blockItem{\n+  \n+}\n .blockArea {\n   display: flex;\n   width: 500px;\n   height: 500px;\n   margin-left: auto;\n   margin-right: auto;\n }\n .blokWinner {\n-  \n+\n }\n .textWin {\n   font-size: 25px;\n   color: gold;\n"
+                },
+                {
+                    "date": 1757931544893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n   font-weight: 600;\n   font-size: 24px;\n }\n .blockItem{\n-  \n+  background: gray;\n }\n .blockArea {\n   display: flex;\n   width: 500px;\n"
+                },
+                {
+                    "date": 1757931586681,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,10 @@\n   font-size: 24px;\n }\n .blockItem{\n   background: gray;\n+  display: flex;\n+  \n }\n .blockArea {\n   display: flex;\n   width: 500px;\n"
+                },
+                {
+                    "date": 1757931604355,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n }\n .blockItem{\n   background: gray;\n   display: flex;\n-  \n+  flex-wrap: wrap;\n }\n .blockArea {\n   display: flex;\n   width: 500px;\n"
+                },
+                {
+                    "date": 1757931637481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n   font-weight: 600;\n   font-size: 24px;\n }\n .blockItem{\n+  position: relative;\n   background: gray;\n   display: flex;\n   flex-wrap: wrap;\n }\n"
+                },
+                {
+                    "date": 1757931688059,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,10 @@\n   position: relative;\n   background: gray;\n   display: flex;\n   flex-wrap: wrap;\n+  width: 140px;\n+  height: 140px;\n }\n .blockArea {\n   display: flex;\n   width: 500px;\n"
+                },
+                {
+                    "date": 1757931708268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n   display: flex;\n   flex-wrap: wrap;\n   width: 140px;\n   height: 140px;\n+  padding: 8px;\n }\n .blockArea {\n   display: flex;\n   width: 500px;\n"
+                },
+                {
+                    "date": 1757931732994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n   flex-wrap: wrap;\n   width: 140px;\n   height: 140px;\n   padding: 8px;\n+  margin: 5px;\n }\n .blockArea {\n   display: flex;\n   width: 500px;\n"
+                },
+                {
+                    "date": 1757931754890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,9 @@\n   width: 140px;\n   height: 140px;\n   padding: 8px;\n   margin: 5px;\n+  align-items: center;\n }\n .blockArea {\n   display: flex;\n   width: 500px;\n"
+                },
+                {
+                    "date": 1757931791842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,50 @@\n+main {\n+  display: flex;\n+  width: 100%;\n+  height: auto;\n+  flex-direction: column;\n+  align-items: center;\n+}\n+.blockwo {\n+  padding: 25px;\n+}\n+.spanwo {\n+  color: greenyellow;\n+  font-weight: 600;\n+  font-size: 24px;\n+}\n+.blockItem {\n+  position: relative;\n+  background: gray;\n+  display: flex;\n+  flex-wrap: wrap;\n+  justify-content: center;\n+  width: 140px;\n+  height: 140px;\n+  padding: 8px;\n+  margin: 5px;\n+}\n+.blockArea {\n+  display: flex;\n+  width: 500px;\n+  height: 500px;\n+  margin-left: auto;\n+  margin-right: auto;\n+}\n+.blokWinner {\n+}\n+.textWin {\n+  font-size: 25px;\n+  color: gold;\n+}\n+.btnNewGame {\n+  color: white;\n+  background: rgb(61, 185, 61);\n+  border-radius: 12px;\n+  padding: 12px;\n+  font-weight: 600;\n+  cursor: pointer;\n+  text-align: center;\n+}\n+.btnNewGame:hover {\n+}\n"
+                },
+                {
+                    "date": 1757932197039,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,78 +12,28 @@\n   color: greenyellow;\n   font-weight: 600;\n   font-size: 24px;\n }\n-.blockItem {\n-  position: relative;\n-  background: gray;\n-  display: flex;\n-  flex-wrap: wrap;\n-  justify-content: center;\n-  width: 140px;\n-  height: 140px;\n-  padding: 8px;\n-  margin: 5px;\n-}\n .blockArea {\n   display: flex;\n   width: 500px;\n   height: 500px;\n   margin-left: auto;\n   margin-right: auto;\n }\n-.blokWinner {\n-}\n-.textWin {\n-  font-size: 25px;\n-  color: gold;\n-}\n-.btnNewGame {\n-  color: white;\n-  background: rgb(61, 185, 61);\n-  border-radius: 12px;\n-  padding: 12px;\n-  font-weight: 600;\n-  cursor: pointer;\n-  text-align: center;\n-}\n-.btnNewGame:hover {\n-}\n-main {\n-  display: flex;\n-  width: 100%;\n-  height: auto;\n-  flex-direction: column;\n-  align-items: center;\n-}\n-.blockwo {\n-  padding: 25px;\n-}\n-.spanwo {\n-  color: greenyellow;\n-  font-weight: 600;\n-  font-size: 24px;\n-}\n-.blockItem{\n+.blockItem {\n   position: relative;\n   background: gray;\n   display: flex;\n   flex-wrap: wrap;\n+  justify-content: center;\n   width: 140px;\n   height: 140px;\n   padding: 8px;\n   margin: 5px;\n-  align-items: center;\n }\n-.blockArea {\n-  display: flex;\n-  width: 500px;\n-  height: 500px;\n-  margin-left: auto;\n-  margin-right: auto;\n-}\n+\n .blokWinner {\n-\n }\n .textWin {\n   font-size: 25px;\n   color: gold;\n@@ -96,7 +46,6 @@\n   font-weight: 600;\n   cursor: pointer;\n   text-align: center;\n }\n-.btnNewGame:hover{\n-\n+.btnNewGame:hover {\n }\n"
+                },
+                {
+                    "date": 1757932229983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n   width: 500px;\n   height: 500px;\n   margin-left: auto;\n   margin-right: auto;\n+  border-radius: 24px;\n }\n .blockItem {\n   position: relative;\n   background: gray;\n"
+                },
+                {
+                    "date": 1757932260024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,53 @@\n+main {\n+  display: flex;\n+  width: 100%;\n+  height: auto;\n+  flex-direction: column;\n+  align-items: center;\n+}\n+.blockwo {\n+  padding: 25px;\n+}\n+.spanwo {\n+  color: greenyellow;\n+  font-weight: 600;\n+  font-size: 24px;\n+}\n+.blockArea {\n+  display: flex;\n+  width: 500px;\n+  height: 500px;\n+  margin-left: auto;\n+  margin-right: auto;\n+  border-radius: 24px;\n+  background: aliceblue;\n+}\n+.blockItem {\n+  position: relative;\n+  background: gray;\n+  display: flex;\n+  flex-wrap: wrap;\n+  justify-content: center;\n+  width: 140px;\n+  height: 140px;\n+  padding: 8px;\n+  margin: 5px;\n+}\n+\n+.blokWinner {\n+}\n+.textWin {\n+  font-size: 25px;\n+  color: gold;\n+}\n+.btnNewGame {\n+  color: white;\n+  background: rgb(61, 185, 61);\n+  border-radius: 12px;\n+  padding: 12px;\n+  font-weight: 600;\n+  cursor: pointer;\n+  text-align: center;\n+}\n+.btnNewGame:hover {\n+}\n"
+                },
+                {
+                    "date": 1757932320225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,8 +20,9 @@\n   margin-left: auto;\n   margin-right: auto;\n   border-radius: 24px;\n   background: aliceblue;\n+  box-shadow: 3 1 5 ;\n }\n .blockItem {\n   position: relative;\n   background: gray;\n@@ -50,56 +51,4 @@\n   text-align: center;\n }\n .btnNewGame:hover {\n }\n-main {\n-  display: flex;\n-  width: 100%;\n-  height: auto;\n-  flex-direction: column;\n-  align-items: center;\n-}\n-.blockwo {\n-  padding: 25px;\n-}\n-.spanwo {\n-  color: greenyellow;\n-  font-weight: 600;\n-  font-size: 24px;\n-}\n-.blockArea {\n-  display: flex;\n-  width: 500px;\n-  height: 500px;\n-  margin-left: auto;\n-  margin-right: auto;\n-  border-radius: 24px;\n-}\n-.blockItem {\n-  position: relative;\n-  background: gray;\n-  display: flex;\n-  flex-wrap: wrap;\n-  justify-content: center;\n-  width: 140px;\n-  height: 140px;\n-  padding: 8px;\n-  margin: 5px;\n-}\n-\n-.blokWinner {\n-}\n-.textWin {\n-  font-size: 25px;\n-  color: gold;\n-}\n-.btnNewGame {\n-  color: white;\n-  background: rgb(61, 185, 61);\n-  border-radius: 12px;\n-  padding: 12px;\n-  font-weight: 600;\n-  cursor: pointer;\n-  text-align: center;\n-}\n-.btnNewGame:hover {\n-}\n"
+                },
+                {
+                    "date": 1757932348256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n   margin-left: auto;\n   margin-right: auto;\n   border-radius: 24px;\n   background: aliceblue;\n-  box-shadow: 3 1 5 ;\n+  box-shadow: 3px 5px 1px 1px;\n }\n .blockItem {\n   position: relative;\n   background: gray;\n"
+                },
+                {
+                    "date": 1757932415485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,54 @@\n+main {\n+  display: flex;\n+  width: 100%;\n+  height: auto;\n+  flex-direction: column;\n+  align-items: center;\n+}\n+.blockwo {\n+  padding: 25px;\n+}\n+.spanwo {\n+  color: greenyellow;\n+  font-weight: 600;\n+  font-size: 24px;\n+}\n+.blockArea {\n+  display: flex;\n+  width: 500px;\n+  height: 500px;\n+  margin-left: auto;\n+  margin-right: auto;\n+  border-radius: 24px;\n+  background: aliceblue;\n+  box-shadow: 3px 5px 1px 1px rgba();\n+}\n+.blockItem {\n+  position: relative;\n+  background: gray;\n+  display: flex;\n+  flex-wrap: wrap;\n+  justify-content: center;\n+  width: 140px;\n+  height: 140px;\n+  padding: 8px;\n+  margin: 5px;\n+}\n+\n+.blokWinner {\n+}\n+.textWin {\n+  font-size: 25px;\n+  color: gold;\n+}\n+.btnNewGame {\n+  color: white;\n+  background: rgb(61, 185, 61);\n+  border-radius: 12px;\n+  padding: 12px;\n+  font-weight: 600;\n+  cursor: pointer;\n+  text-align: center;\n+}\n+.btnNewGame:hover {\n+}\n"
+                },
+                {
+                    "date": 1757932457515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n   font-size: 24px;\n }\n .blockArea {\n   display: flex;\n+  flex-wrap: wrap;\n   width: 500px;\n   height: 500px;\n   margin-left: auto;\n   margin-right: auto;\n@@ -26,9 +27,8 @@\n .blockItem {\n   position: relative;\n   background: gray;\n   display: flex;\n-  flex-wrap: wrap;\n   justify-content: center;\n   width: 140px;\n   height: 140px;\n   padding: 8px;\n"
+                },
+                {
+                    "date": 1757932585810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,59 +50,6 @@\n   cursor: pointer;\n   text-align: center;\n }\n .btnNewGame:hover {\n+  background: rgb(150, 144, 144);\n }\n-main {\n-  display: flex;\n-  width: 100%;\n-  height: auto;\n-  flex-direction: column;\n-  align-items: center;\n-}\n-.blockwo {\n-  padding: 25px;\n-}\n-.spanwo {\n-  color: greenyellow;\n-  font-weight: 600;\n-  font-size: 24px;\n-}\n-.blockArea {\n-  display: flex;\n-  width: 500px;\n-  height: 500px;\n-  margin-left: auto;\n-  margin-right: auto;\n-  border-radius: 24px;\n-  background: aliceblue;\n-  box-shadow: 3px 5px 1px 1px;\n-}\n-.blockItem {\n-  position: relative;\n-  background: gray;\n-  display: flex;\n-  flex-wrap: wrap;\n-  justify-content: center;\n-  width: 140px;\n-  height: 140px;\n-  padding: 8px;\n-  margin: 5px;\n-}\n-\n-.blokWinner {\n-}\n-.textWin {\n-  font-size: 25px;\n-  color: gold;\n-}\n-.btnNewGame {\n-  color: white;\n-  background: rgb(61, 185, 61);\n-  border-radius: 12px;\n-  padding: 12px;\n-  font-weight: 600;\n-  cursor: pointer;\n-  text-align: center;\n-}\n-.btnNewGame:hover {\n-}\n"
+                },
+                {
+                    "date": 1757932667924,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -50,6 +50,6 @@\n   cursor: pointer;\n   text-align: center;\n }\n .btnNewGame:hover {\n-  background: rgb(150, 144, 144);\n+  background: rgb(174, 174, 174);\n }\n"
+                },
+                {
+                    "date": 1757932827905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,7 +49,7 @@\n   font-weight: 600;\n   cursor: pointer;\n   text-align: center;\n }\n-.btnNewGame:hover {\n+.blockItem:hover {\n   background: rgb(174, 174, 174);\n }\n"
+                }
+            ],
+            "date": 1757930894101,
+            "name": "Commit-0",
+            "content": "main {\n  display: flex;\n  width: 100%;\n  height: auto;\n  flex-direction: column;\n  align-items: center;\n}\n.blockwo {\n  padding: 25px;\n}\n.spanwo {\n  color: greenyellow;\n  font-weight: 600;\n  font-size: 24px;\n}\n.blockArea {\n  display: flex;\n  width: 500px;\n  height: 500px;\n  margin-left: auto;\n  margin-right: auto;\n}\n.blokWinner{\n  \n}\n.textWin{\n\n}\n.btnNewGame {\n  color: white;\n  background: rgb(61, 185, 61);\n  border-radius: 12px;\n  padding: 12px;\n  font-weight: 600;\n  cursor: pointer;\n}\n"
+        }
+    ]
+}
