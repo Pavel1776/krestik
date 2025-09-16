@@ -3,11 +3,27 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 4,
             "patches": [
                 {
                     "date": 1757953899614,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1757954553484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,44 @@\n+<!DOCTYPE html>\n+<html lang=\"en\">\n+\n+<head>\n+  <meta charset=\"UTF-8\">\n+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n+  <link href=\"style.css\" rel=\"stylesheet\">\n+  <title>крестики-нолики</title>\n+</head>\n+\n+<body>\n+  <main>\n+    <div class=\"blockwo\">\n+      <div class=\"Text\">Ход: <span id=\"spanwo\"></span></div>\n+    </div>\n+\n+    <div class=\"blockArea\" id=\"blockArea\">\n+      <div class=\"blockItem\">1</div>\n+      <div class=\"blockItem\">2</div>\n+      <div class=\"blockItem\">3</div>\n+\n+      <div class=\"blockItem\">4</div>\n+      <div class=\"blockItem\">5</div>\n+      <div class=\"blockItem\">6</div>\n+\n+      <div class=\"blockItem\">7</div>\n+      <div class=\"blockItem\">8</div>\n+      <div class=\"blockItem\">9</div>\n+    </div>\n+\n+    <div class=\"blokWinner\" id=\"blokWinner\">\n+      <div class=\"textWin\">Победитель: <span id=\"spanWin\"></span></div>\n+      <div class=\"btnNewGame\" id=\"btnNewGame\">Новая игра</div>\n+    </div>\n+\n+\n+\n+\n+\n+  </main>\n+<script src=\"app.js\"></script>\n+</body>\n+\n+</html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1757955527165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n <body>\n   <main>\n     <div class=\"blockwo\">\n-      <div class=\"Text\">Ход: <span id=\"spanwo\"></span></div>\n+      <div class=\"Text\">Ход: <span id=\"spanWo\"></span></div>\n     </div>\n \n     <div class=\"blockArea\" id=\"blockArea\">\n       <div class=\"blockItem\">1</div>\n@@ -40,49 +40,5 @@\n   </main>\n <script src=\"app.js\"></script>\n </body>\n \n-</html>\n-<!DOCTYPE html>\n-<html lang=\"en\">\n-\n-<head>\n-  <meta charset=\"UTF-8\">\n-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n-  <link href=\"style.css\" rel=\"stylesheet\">\n-  <title>крестики-нолики</title>\n-</head>\n-\n-<body>\n-  <main>\n-    <div class=\"blockwo\">\n-      <div class=\"Text\">Ход: <span id=\"spanwo\"></span></div>\n-    </div>\n-\n-    <div class=\"blockArea\" id=\"blockArea\">\n-      <div class=\"blockItem\">1</div>\n-      <div class=\"blockItem\">2</div>\n-      <div class=\"blockItem\">3</div>\n-\n-      <div class=\"blockItem\">4</div>\n-      <div class=\"blockItem\">5</div>\n-      <div class=\"blockItem\">6</div>\n-\n-      <div class=\"blockItem\">7</div>\n-      <div class=\"blockItem\">8</div>\n-      <div class=\"blockItem\">9</div>\n-    </div>\n-\n-    <div class=\"blokWinner\" id=\"blokWinner\">\n-      <div class=\"textWin\">Победитель: <span id=\"spanWin\"></span></div>\n-      <div class=\"btnNewGame\" id=\"btnNewGame\">Новая игра</div>\n-    </div>\n-\n-\n-\n-\n-\n-  </main>\n-\n-</body>\n-\n </html>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1757955585284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n <body>\n   <main>\n     <div class=\"blockwo\">\n-      <div class=\"Text\">Ход: <span id=\"spanWo\"></span></div>\n+      <div class=\"Text\">Ход: <span id=\"spanWho\"></span></div>\n     </div>\n \n     <div class=\"blockArea\" id=\"blockArea\">\n       <div class=\"blockItem\">1</div>\n"
+                },
+                {
+                    "date": 1757955643412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n </head>\n \n <body>\n   <main>\n-    <div class=\"blockwo\">\n+    <div class=\"blockWho\">\n       <div class=\"Text\">Ход: <span id=\"spanWho\"></span></div>\n     </div>\n \n     <div class=\"blockArea\" id=\"blockArea\">\n"
                 }
             ],
             "date": 1757953899614,

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 40,
+            "activePatchIndex": 43,
             "patches": [
                 {
                     "date": 1757930894101,
@@ -168,6 +168,18 @@
                 {
                     "date": 1757954192418,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -81,6 +81,6 @@\n   cursor: pointer;\n   text-align: center;\n }\n .btnNewGame:hover{\n-  background: rgb(124, 213, 124);\n+  background: rgb(98, 222, 98);\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1757955553510,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,86 @@\n+main {\n+  display: flex;\n+  width: 100%;\n+  height: auto;\n+  flex-direction: column;\n+  align-items: center;\n+}\n+.blockwo {\n+  padding: 25px;\n+}\n+.spanWo {\n+  color: greenyellow;\n+  font-weight: 600;\n+  font-size: 24px;\n+}\n+.blockArea {\n+  display: flex;\n+  flex-wrap: wrap;\n+  width: 500px;\n+  height: 500px;\n+  margin-left: auto;\n+  margin-right: auto;\n+  border-radius: 24px;\n+  background: aliceblue;\n+  box-shadow: 3px 5px 1px 1px rgba();\n+}\n+.blockItem {\n+  position: relative;\n+  background: gray;\n+  display: flex;\n+  justify-content: center;\n+  width: 140px;\n+  height: 140px;\n+  padding: 8px;\n+  margin: 5px;\n+  border-radius: 24px;\n+}\n+\n+\n+.blockItem:hover {\n+  background: rgb(174, 174, 174);\n+}\n+.krest {\n+  color: rgb(135, 220, 250);\n+  font-size: 38px;\n+  display: flex;\n+  justify-content: center;\n+}\n+.circle {\n+  color: rgb(135, 250, 135);\n+  font-size: 38px;\n+  display: flex;\n+  justify-content: center;\n+}\n+.winColor {\n+  color: rgb(21, 168, 21);\n+  background: gold;\n+  font-size: 50px;\n+  font-weight: 900;\n+}\n+\n+.blokWinner {\n+  margin-top: 24px;\n+  display: flex;\n+  flex-direction: column;\n+}\n+.textWin {\n+  font-size: 25px;\n+  margin-bottom: 12px;\n+}\n+#spanWin{\n+  font-size: 24px;\n+  color: gold;\n+}\n+.btnNewGame {\n+  padding: 12px;\n+  color: white;\n+  background: rgb(55, 196, 55);\n+  border-radius: 12px;\n+  font-weight: 600;\n+  cursor: pointer;\n+  text-align: center;\n+}\n+.btnNewGame:hover{\n+  background: rgb(98, 222, 98);\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1757955637045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n }\n .blockwo {\n   padding: 25px;\n }\n-.spanWo {\n+.spanWho {\n   color: greenyellow;\n   font-weight: 600;\n   font-size: 24px;\n }\n@@ -82,91 +82,5 @@\n   text-align: center;\n }\n .btnNewGame:hover{\n   background: rgb(98, 222, 98);\n-}\n-main {\n-  display: flex;\n-  width: 100%;\n-  height: auto;\n-  flex-direction: column;\n-  align-items: center;\n-}\n-.blockwo {\n-  padding: 25px;\n-}\n-.spanwo {\n-  color: greenyellow;\n-  font-weight: 600;\n-  font-size: 24px;\n-}\n-.blockArea {\n-  display: flex;\n-  flex-wrap: wrap;\n-  width: 500px;\n-  height: 500px;\n-  margin-left: auto;\n-  margin-right: auto;\n-  border-radius: 24px;\n-  background: aliceblue;\n-  box-shadow: 3px 5px 1px 1px rgba();\n-}\n-.blockItem {\n-  position: relative;\n-  background: gray;\n-  display: flex;\n-  justify-content: center;\n-  width: 140px;\n-  height: 140px;\n-  padding: 8px;\n-  margin: 5px;\n-  border-radius: 24px;\n-}\n-\n-\n-.blockItem:hover {\n-  background: rgb(174, 174, 174);\n-}\n-.krest {\n-  color: rgb(135, 220, 250);\n-  font-size: 38px;\n-  display: flex;\n-  justify-content: center;\n-}\n-.circle {\n-  color: rgb(135, 250, 135);\n-  font-size: 38px;\n-  display: flex;\n-  justify-content: center;\n-}\n-.winColor {\n-  color: rgb(21, 168, 21);\n-  background: gold;\n-  font-size: 50px;\n-  font-weight: 900;\n-}\n-\n-.blokWinner {\n-  margin-top: 24px;\n-  display: flex;\n-  flex-direction: column;\n-}\n-.textWin {\n-  font-size: 25px;\n-  margin-bottom: 12px;\n-}\n-#spanWin{\n-  font-size: 24px;\n-  color: gold;\n-}\n-.btnNewGame {\n-  padding: 12px;\n-  color: white;\n-  background: rgb(55, 196, 55);\n-  border-radius: 12px;\n-  font-weight: 600;\n-  cursor: pointer;\n-  text-align: center;\n-}\n-.btnNewGame:hover{\n-  background: rgb(98, 222, 98);\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1757955669124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n   height: auto;\n   flex-direction: column;\n   align-items: center;\n }\n-.blockwo {\n+.blockWho {\n   padding: 25px;\n }\n .spanWho {\n   color: greenyellow;\n"
                 }
             ],
             "date": 1757930894101,

@@ -1,0 +1,150 @@
+{
+    "sourceFile": "app.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 33,
+            "patches": [
+                {
+                    "date": 1757954714015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1757955521923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,2 @@\n let step = \"\";\n+let\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1757956505534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n let step = \"\";\n-let\n\\ No newline at end of file\n+let \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1757956548077,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n let step = \"\";\n-let \n\\ No newline at end of file\n+let spanWho = document.getElementById('')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1757956878651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n let step = \"\";\n-let spanWho = document.getElementById('')\n\\ No newline at end of file\n+let spanWho = document.getElementById('btnNewGame')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1757999755366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,2 @@\n let step = \"\";\n-let spanWho = document.getElementById('btnNewGame')\n\\ No newline at end of file\n+let spanWho = document.getElementById('btnNewGame')\n"
+                },
+                {
+                    "date": 1757999867961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,2 +1,9 @@\n let step = \"\";\n+\n let spanWho = document.getElementById('btnNewGame')\n+\n+const who =()=>{\n+  if (step =='circle'){\n+    step = 'krest' ;\n+  }\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1757999944827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,8 @@\n \n const who =()=>{\n   if (step =='circle'){\n     step = 'krest' ;\n+    spanWho.innerText = 'step'\n+    \n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1757999968591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,6 @@\n const who =()=>{\n   if (step =='circle'){\n     step = 'krest' ;\n     spanWho.innerText = 'step'\n-    \n-  }\n+  } else {}\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758000081565,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,10 @@\n \n const who =()=>{\n   if (step =='circle'){\n     step = 'krest' ;\n+    spanWho.innerText = 'Крестики'\n+  } else {\n+    step = 'circle'\n     spanWho.innerText = 'step'\n-  } else {}\n+  }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758000099116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n     step = 'krest' ;\n     spanWho.innerText = 'Крестики'\n   } else {\n     step = 'circle'\n-    spanWho.innerText = 'step'\n+    spanWho.innerText = 'Нулики'\n   }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758000150895,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,6 @@\n   } else {\n     step = 'circle'\n     spanWho.innerText = 'Нулики'\n   }\n-}\n\\ No newline at end of file\n+}\n+\n"
+                },
+                {
+                    "date": 1758036874755,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,5 +10,7 @@\n     step = 'circle'\n     spanWho.innerText = 'Нулики'\n   }\n }\n+who()\n \n+let\n"
+                },
+                {
+                    "date": 1758036914615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,16 @@\n+let step = \"\";\n+\n+let spanWho = document.getElementById('btnNewGame')\n+\n+const who =()=>{\n+  if (step =='circle'){\n+    step = 'krest' ;\n+    spanWho.innerText = 'Крестики'\n+  } else {\n+    step = 'circle'\n+    spanWho.innerText = 'Нулики'\n+  }\n+}\n+who()\n+\n+let blockItem = \n"
+                },
+                {
+                    "date": 1758037037522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,21 +12,5 @@\n   }\n }\n who()\n \n-let blockItem = \n-let step = \"\";\n-\n-let spanWho = document.getElementById('btnNewGame')\n-\n-const who =()=>{\n-  if (step =='circle'){\n-    step = 'krest' ;\n-    spanWho.innerText = 'Крестики'\n-  } else {\n-    step = 'circle'\n-    spanWho.innerText = 'Нулики'\n-  }\n-}\n-who()\n-\n-let\n+let blockItem = document.querySelectorAll(.)\n"
+                },
+                {
+                    "date": 1758037049034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,5 @@\n   }\n }\n who()\n \n-let blockItem = document.querySelectorAll(.)\n+let blockItem = document.querySelectorAll('.')\n"
+                },
+                {
+                    "date": 1758037071490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,5 @@\n   }\n }\n who()\n \n-let blockItem = document.querySelectorAll('.')\n+let blockItem = document.querySelectorAll('.blockItem')\n"
+                },
+                {
+                    "date": 1758037099455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,4 +13,5 @@\n }\n who()\n \n let blockItem = document.querySelectorAll('.blockItem')\n+let counter = 0\n"
+                },
+                {
+                    "date": 1758037108443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,5 +13,5 @@\n }\n who()\n \n let blockItem = document.querySelectorAll('.blockItem')\n-let counter = 0\n+let counter = 0;\n"
+                },
+                {
+                    "date": 1758037127569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,4 +14,6 @@\n who()\n \n let blockItem = document.querySelectorAll('.blockItem')\n let counter = 0;\n+\n+blockItem\n"
+                },
+                {
+                    "date": 1758037243605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,5 +15,7 @@\n \n let blockItem = document.querySelectorAll('.blockItem')\n let counter = 0;\n \n-blockItem\n+blockItem.array.forEach((item) => {\n+  item.addEventListener('click' ,()=>{})\n+});\n"
+                },
+                {
+                    "date": 1758037322627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,6 +16,9 @@\n let blockItem = document.querySelectorAll('.blockItem')\n let counter = 0;\n \n blockItem.array.forEach((item) => {\n-  item.addEventListener('click' ,()=>{})\n-});\n+  item.addEventListener('click' ,()=>{\n+    if()\n+  })\n+  \n+})\n"
+                },
+                {
+                    "date": 1758037348229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,8 @@\n let counter = 0;\n \n blockItem.array.forEach((item) => {\n   item.addEventListener('click' ,()=>{\n-    if()\n+    if(item.classlist)\n   })\n   \n })\n"
+                },
+                {
+                    "date": 1758037397417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,8 @@\n let counter = 0;\n \n blockItem.array.forEach((item) => {\n   item.addEventListener('click' ,()=>{\n-    if(item.classlist)\n+    if(item.classlist.contains('circle') && item.classlist)\n   })\n   \n })\n"
+                },
+                {
+                    "date": 1758037411502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,8 @@\n let counter = 0;\n \n blockItem.array.forEach((item) => {\n   item.addEventListener('click' ,()=>{\n-    if(item.classlist.contains('circle') && item.classlist)\n+    if(!item.classlist.contains('circle') && item.classlist)\n   })\n   \n })\n"
+                },
+                {
+                    "date": 1758037422484,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,8 @@\n let counter = 0;\n \n blockItem.array.forEach((item) => {\n   item.addEventListener('click' ,()=>{\n-    if(!item.classlist.contains('circle') && item.classlist)\n+    if(!item.classlist.contains('circle') && !item.classlist)\n   })\n   \n })\n"
+                },
+                {
+                    "date": 1758037626032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,8 @@\n let counter = 0;\n \n blockItem.array.forEach((item) => {\n   item.addEventListener('click' ,()=>{\n-    if(!item.classlist.contains('circle') && !item.classlist)\n+    if(!item.classlist.contains('circle') && !item.classlist.contains('krest'))item.classList.add(step)\n   })\n   \n })\n"
+                },
+                {
+                    "date": 1758037752323,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,8 +17,9 @@\n let counter = 0;\n \n blockItem.array.forEach((item) => {\n   item.addEventListener('click' ,()=>{\n-    if(!item.classlist.contains('circle') && !item.classlist.contains('krest'))item.classList.add(step)\n+    if(!item.classlist.contains('circle') && !item.classlist.contains('krest')){\n+      item.classList.add(step)\n   })\n   \n })\n"
+                },
+                {
+                    "date": 1758037800164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,7 +19,10 @@\n blockItem.array.forEach((item) => {\n   item.addEventListener('click' ,()=>{\n     if(!item.classlist.contains('circle') && !item.classlist.contains('krest')){\n       item.classList.add(step)\n+    }\n+      \n+\n   })\n   \n })\n"
+                },
+                {
+                    "date": 1758037915685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,12 +15,13 @@\n \n let blockItem = document.querySelectorAll('.blockItem')\n let counter = 0;\n \n-blockItem.array.forEach((item) => {\n+blockItem.forEach((item) => {\n   item.addEventListener('click' ,()=>{\n     if(!item.classlist.contains('circle') && !item.classlist.contains('krest')){\n       item.classList.add(step)\n+\n     }\n       \n \n   })\n"
+                },
+                {
+                    "date": 1758038105062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \n let spanWho = document.getElementById('btnNewGame')\n \n const who =()=>{\n-  if (step =='circle'){\n+  if (step == 'circle'){\n     step = 'krest' ;\n     spanWho.innerText = 'Крестики'\n   } else {\n     step = 'circle'\n"
+                },
+                {
+                    "date": 1758038135500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n let step = \"\";\n \n let spanWho = document.getElementById('btnNewGame')\n+let winner = ''\n \n const who =()=>{\n   if (step == 'circle'){\n     step = 'krest' ;\n"
+                },
+                {
+                    "date": 1758038227276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n \n let blockItem = document.querySelectorAll('.blockItem')\n let counter = 0;\n \n-blockItem.forEach((item) => {\n+blockItem.forEach((item)=>{\n   item.addEventListener('click' ,()=>{\n     if(!item.classlist.contains('circle') && !item.classlist.contains('krest')){\n       item.classList.add(step)\n \n"
+                },
+                {
+                    "date": 1758038479427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n let counter = 0;\n \n blockItem.forEach((item)=>{\n   item.addEventListener('click' ,()=>{\n-    if(!item.classlist.contains('circle') && !item.classlist.contains('krest')){\n+    if(!item.classList.contains('circle') && !item.classList.contains('krest')){\n       item.classList.add(step)\n \n     }\n       \n"
+                }
+            ],
+            "date": 1757954714015,
+            "name": "Commit-0",
+            "content": "let step = \"\";\n"
+        }
+    ]
+}
