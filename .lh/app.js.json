@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 33,
+            "activePatchIndex": 85,
             "patches": [
                 {
                     "date": 1757954714015,
@@ -140,6 +140,214 @@
                 {
                     "date": 1758038479427,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n let counter = 0;\n \n blockItem.forEach((item)=>{\n   item.addEventListener('click' ,()=>{\n-    if(!item.classlist.contains('circle') && !item.classlist.contains('krest')){\n+    if(!item.classList.contains('circle') && !item.classList.contains('krest')){\n       item.classList.add(step)\n \n     }\n       \n"
+                },
+                {
+                    "date": 1758041076181,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n let step = \"\";\n \n-let spanWho = document.getElementById('btnNewGame')\n+let spanWho = document.getElementById('spanWho')\n let winner = ''\n \n const who =()=>{\n   if (step == 'circle'){\n"
+                },
+                {
+                    "date": 1758089717133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n blockItem.forEach((item)=>{\n   item.addEventListener('click' ,()=>{\n     if(!item.classList.contains('circle') && !item.classList.contains('krest')){\n       item.classList.add(step)\n-\n+      \n     }\n       \n \n   })\n"
+                },
+                {
+                    "date": 1758090045642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,14 @@\n blockItem.forEach((item)=>{\n   item.addEventListener('click' ,()=>{\n     if(!item.classList.contains('circle') && !item.classList.contains('krest')){\n       item.classList.add(step)\n-      \n+      if (step=='krest'){\n+        item.innerText = \"x\"\n+      }\n+      if (step=='circle'){\n+        item.innerText = \"y\"\n+      }\n     }\n       \n \n   })\n"
+                },
+                {
+                    "date": 1758090059786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n       if (step=='krest'){\n         item.innerText = \"x\"\n       }\n       if (step=='circle'){\n-        item.innerText = \"y\"\n+        item.innerText = \"0\"\n       }\n     }\n       \n \n"
+                },
+                {
+                    "date": 1758090100635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,10 @@\n       if (step=='circle'){\n         item.innerText = \"0\"\n       }\n     }\n-      \n+    \n+    who() \n \n   })\n   \n })\n"
+                },
+                {
+                    "date": 1758090109107,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,11 @@\n \n let spanWho = document.getElementById('spanWho')\n let winner = ''\n \n-const who =()=>{\n-  if (step == 'circle'){\n-    step = 'krest' ;\n+const who = () => {\n+  if (step == 'circle') {\n+    step = 'krest';\n     spanWho.innerText = 'Крестики'\n   } else {\n     step = 'circle'\n     spanWho.innerText = 'Нулики'\n@@ -16,21 +16,21 @@\n \n let blockItem = document.querySelectorAll('.blockItem')\n let counter = 0;\n \n-blockItem.forEach((item)=>{\n-  item.addEventListener('click' ,()=>{\n-    if(!item.classList.contains('circle') && !item.classList.contains('krest')){\n+blockItem.forEach((item) => {\n+  item.addEventListener('click', () => {\n+    if (!item.classList.contains('circle') && !item.classList.contains('krest')) {\n       item.classList.add(step)\n-      if (step=='krest'){\n+      if (step == 'krest') {\n         item.innerText = \"x\"\n       }\n-      if (step=='circle'){\n+      if (step == 'circle') {\n         item.innerText = \"0\"\n       }\n     }\n-    \n-    who() \n \n+    who()\n+\n   })\n-  \n+\n })\n"
+                },
+                {
+                    "date": 1758090149761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n       if (step == 'circle') {\n         item.innerText = \"0\"\n       }\n     }\n-\n+    \n     who()\n \n   })\n \n"
+                },
+                {
+                    "date": 1758090175332,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n       if (step == 'circle') {\n         item.innerText = \"0\"\n       }\n     }\n-    \n+    counter++;\n     who()\n \n   })\n \n"
+                },
+                {
+                    "date": 1758091000096,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,4 +33,15 @@\n \n   })\n \n })\n+let win = \n+[\n+  [0,1,2]\n+  [0,4,8]\n+  [2,4,6]\n+  [3,4,5]\n+  [6,7,8]\n+  [0,3,6]\n+  [1,4,7]\n+  [2,5,8]\n+]\n"
+                },
+                {
+                    "date": 1758091143378,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,4 +44,5 @@\n   [0,3,6]\n   [1,4,7]\n   [2,5,8]\n ]\n+let circleWin = \n"
+                },
+                {
+                    "date": 1758091170270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,5 +44,7 @@\n   [0,3,6]\n   [1,4,7]\n   [2,5,8]\n ]\n-let circleWin = \n+let circleWin = ()=>{\n+  \n+}\n"
+                },
+                {
+                    "date": 1758091444308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,6 +45,8 @@\n   [1,4,7]\n   [2,5,8]\n ]\n let circleWin = ()=>{\n-  \n+  for(let i = 0; i>win.length; i++){\n+    \n+  }\n }\n"
+                },
+                {
+                    "date": 1758469363211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,7 +46,7 @@\n   [2,5,8]\n ]\n let circleWin = ()=>{\n   for(let i = 0; i>win.length; i++){\n-    \n+    blockItem[win[i][0]]\n   }\n }\n"
+                },
+                {
+                    "date": 1758469399623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,7 +46,7 @@\n   [2,5,8]\n ]\n let circleWin = ()=>{\n   for(let i = 0; i>win.length; i++){\n-    blockItem[win[i][0]]\n+    blockItem[win[i][0]].classList.\n   }\n }\n"
+                },
+                {
+                    "date": 1758469462974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,7 +46,9 @@\n   [2,5,8]\n ]\n let circleWin = ()=>{\n   for(let i = 0; i>win.length; i++){\n-    blockItem[win[i][0]].classList.\n+    blockItem[win[i][0]].classList.contains('circle') &&\n+    blockItem[win[i][1]].classList.contains('circle') &&\n+    blockItem[win[i][2]].classList.contains('circle') &&\n   }\n }\n"
+                },
+                {
+                    "date": 1758469497478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,8 +46,9 @@\n   [2,5,8]\n ]\n let circleWin = ()=>{\n   for(let i = 0; i>win.length; i++){\n+    if\n     blockItem[win[i][0]].classList.contains('circle') &&\n     blockItem[win[i][1]].classList.contains('circle') &&\n     blockItem[win[i][2]].classList.contains('circle') &&\n   }\n"
+                },
+                {
+                    "date": 1758469532689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,10 +46,13 @@\n   [2,5,8]\n ]\n let circleWin = ()=>{\n   for(let i = 0; i>win.length; i++){\n-    if\n+    if (\n     blockItem[win[i][0]].classList.contains('circle') &&\n     blockItem[win[i][1]].classList.contains('circle') &&\n     blockItem[win[i][2]].classList.contains('circle') &&\n+    ){\n+      \n+    }\n   }\n }\n"
+                },
+                {
+                    "date": 1758469559608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -49,10 +49,10 @@\n   for(let i = 0; i>win.length; i++){\n     if (\n     blockItem[win[i][0]].classList.contains('circle') &&\n     blockItem[win[i][1]].classList.contains('circle') &&\n-    blockItem[win[i][2]].classList.contains('circle') &&\n+    blockItem[win[i][2]].classList.contains('circle') \n     ){\n-      \n+\n     }\n   }\n }\n"
+                },
+                {
+                    "date": 1758469634256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -51,8 +51,10 @@\n     blockItem[win[i][0]].classList.contains('circle') &&\n     blockItem[win[i][1]].classList.contains('circle') &&\n     blockItem[win[i][2]].classList.contains('circle') \n     ){\n-\n+      blockItem[win[i][0]].classList.add('winColor') \n+      blockItem[win[i][1]].classList.add('winColor') \n+      blockItem[win[i][2]].classList.add('winColor')\n     }\n   }\n }\n"
+                },
+                {
+                    "date": 1758469670635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -54,7 +54,10 @@\n     ){\n       blockItem[win[i][0]].classList.add('winColor') \n       blockItem[win[i][1]].classList.add('winColor') \n       blockItem[win[i][2]].classList.add('winColor')\n+\n+      winner\n+\n     }\n   }\n }\n"
+                },
+                {
+                    "date": 1758469755329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,64 @@\n+let step = \"\";\n+\n+let spanWho = document.getElementById('spanWho')\n+let winner = ''\n+\n+const who = () => {\n+  if (step == 'circle') {\n+    step = 'krest';\n+    spanWho.innerText = 'Крестики'\n+  } else {\n+    step = 'circle'\n+    spanWho.innerText = 'Нулики'\n+  }\n+}\n+who()\n+\n+let blockItem = document.querySelectorAll('.blockItem')\n+let counter = 0;\n+\n+blockItem.forEach((item) => {\n+  item.addEventListener('click', () => {\n+    if (!item.classList.contains('circle') && !item.classList.contains('krest')) {\n+      item.classList.add(step)\n+      if (step == 'krest') {\n+        item.innerText = \"x\"\n+      }\n+      if (step == 'circle') {\n+        item.innerText = \"0\"\n+      }\n+    }\n+    counter++;\n+    who()\n+\n+  })\n+\n+})\n+let win = \n+[\n+  [0,1,2]\n+  [0,4,8]\n+  [2,4,6]\n+  [3,4,5]\n+  [6,7,8]\n+  [0,3,6]\n+  [1,4,7]\n+  [2,5,8]\n+]\n+let circleWin = ()=>{\n+  for(let i = 0; i>win.length; i++){\n+    if (\n+    blockItem[win[i][0]].classList.contains('circle') &&\n+    blockItem[win[i][1]].classList.contains('circle') &&\n+    blockItem[win[i][2]].classList.contains('circle') \n+    ){\n+      blockItem[win[i][0]].classList.add('winColor') \n+      blockItem[win[i][1]].classList.add('winColor') \n+      blockItem[win[i][2]].classList.add('winColor')\n+\n+      winner = \"Нулики\"\n+      return 1\n+\n+    }\n+  }\n+}\n"
+                },
+                {
+                    "date": 1758469799781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -61,4 +61,23 @@\n \n     }\n   }\n }\n+\n+\n+let circleWin = ()=>{\n+  for(let i = 0; i>win.length; i++){\n+    if (\n+    blockItem[win[i][0]].classList.contains('circle') &&\n+    blockItem[win[i][1]].classList.contains('circle') &&\n+    blockItem[win[i][2]].classList.contains('circle') \n+    ){\n+      blockItem[win[i][0]].classList.add('winColor') \n+      blockItem[win[i][1]].classList.add('winColor') \n+      blockItem[win[i][2]].classList.add('winColor')\n+\n+      winner = \"Нулики\"\n+      return 1\n+\n+    }\n+  }\n+}\n"
+                },
+                {
+                    "date": 1758469822745,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,9 +63,9 @@\n   }\n }\n \n \n-let circleWin = ()=>{\n+let KrestWin = ()=>{\n   for(let i = 0; i>win.length; i++){\n     if (\n     blockItem[win[i][0]].classList.contains('circle') &&\n     blockItem[win[i][1]].classList.contains('circle') &&\n"
+                },
+                {
+                    "date": 1758469838234,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -74,9 +74,9 @@\n       blockItem[win[i][0]].classList.add('winColor') \n       blockItem[win[i][1]].classList.add('winColor') \n       blockItem[win[i][2]].classList.add('winColor')\n \n-      winner = \"Нулики\"\n+      winner = \"Крестики\"\n       return 1\n \n     }\n   }\n"
+                },
+                {
+                    "date": 1758469933684,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,11 +66,11 @@\n \n let KrestWin = ()=>{\n   for(let i = 0; i>win.length; i++){\n     if (\n-    blockItem[win[i][0]].classList.contains('circle') &&\n-    blockItem[win[i][1]].classList.contains('circle') &&\n-    blockItem[win[i][2]].classList.contains('circle') \n+    blockItem[win[i][0]].classList.contains('krest') &&\n+    blockItem[win[i][1]].classList.contains('krest') &&\n+    blockItem[win[i][2]].classList.contains('krest') \n     ){\n       blockItem[win[i][0]].classList.add('winColor') \n       blockItem[win[i][1]].classList.add('winColor') \n       blockItem[win[i][2]].classList.add('winColor')\n"
+                },
+                {
+                    "date": 1758470007302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,85 @@\n+let step = \"\";\n+\n+let spanWho = document.getElementById('spanWho')\n+let winner = ''\n+\n+const who = () => {\n+  if (step == 'circle') {\n+    step = 'krest';\n+    spanWho.innerText = 'Крестики'\n+  } else {\n+    step = 'circle'\n+    spanWho.innerText = 'Нулики'\n+  }\n+}\n+who()\n+\n+let blockItem = document.querySelectorAll('.blockItem')\n+let counter = 0;\n+\n+blockItem.forEach((item) => {\n+  item.addEventListener('click', () => {\n+    if (!item.classList.contains('circle') && !item.classList.contains('krest')) {\n+      item.classList.add(step)\n+      if (step == 'krest') {\n+        item.innerText = \"x\"\n+      }\n+      if (step == 'circle') {\n+        item.innerText = \"0\"\n+      }\n+    }\n+    counter++;\n+    who()\n+    circleWin()\n+\n+\n+  })\n+\n+})\n+let win = \n+[\n+  [0,1,2]\n+  [0,4,8]\n+  [2,4,6]\n+  [3,4,5]\n+  [6,7,8]\n+  [0,3,6]\n+  [1,4,7]\n+  [2,5,8]\n+]\n+let circleWin = ()=>{\n+  for(let i = 0; i>win.length; i++){\n+    if (\n+    blockItem[win[i][0]].classList.contains('circle') &&\n+    blockItem[win[i][1]].classList.contains('circle') &&\n+    blockItem[win[i][2]].classList.contains('circle') \n+    ){\n+      blockItem[win[i][0]].classList.add('winColor') \n+      blockItem[win[i][1]].classList.add('winColor') \n+      blockItem[win[i][2]].classList.add('winColor')\n+\n+      winner = \"Нулики\"\n+      return 1\n+\n+    }\n+  }\n+}\n+\n+\n+let KrestWin = ()=>{\n+  for(let i = 0; i>win.length; i++){\n+    if (\n+    blockItem[win[i][0]].classList.contains('krest') &&\n+    blockItem[win[i][1]].classList.contains('krest') &&\n+    blockItem[win[i][2]].classList.contains('krest') \n+    ){\n+      blockItem[win[i][0]].classList.add('winColor') \n+      blockItem[win[i][1]].classList.add('winColor') \n+      blockItem[win[i][2]].classList.add('winColor')\n+\n+      winner = \"Крестики\"\n+      return 1\n+\n+    }\n+  }\n+}\n"
+                },
+                {
+                    "date": 1758470039586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n     }\n     counter++;\n     who()\n     circleWin()\n+    KrestWin()\n \n \n   })\n \n"
+                },
+                {
+                    "date": 1758470113815,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n     }\n     counter++;\n     who()\n     circleWin()\n-    KrestWin()\n+    krestWin()\n \n \n   })\n \n@@ -66,9 +66,9 @@\n   }\n }\n \n \n-let KrestWin = ()=>{\n+let krestWin = ()=>{\n   for(let i = 0; i>win.length; i++){\n     if (\n     blockItem[win[i][0]].classList.contains('krest') &&\n     blockItem[win[i][1]].classList.contains('krest') &&\n@@ -83,150 +83,4 @@\n \n     }\n   }\n }\n-let step = \"\";\n-\n-let spanWho = document.getElementById('spanWho')\n-let winner = ''\n-\n-const who = () => {\n-  if (step == 'circle') {\n-    step = 'krest';\n-    spanWho.innerText = 'Крестики'\n-  } else {\n-    step = 'circle'\n-    spanWho.innerText = 'Нулики'\n-  }\n-}\n-who()\n-\n-let blockItem = document.querySelectorAll('.blockItem')\n-let counter = 0;\n-\n-blockItem.forEach((item) => {\n-  item.addEventListener('click', () => {\n-    if (!item.classList.contains('circle') && !item.classList.contains('krest')) {\n-      item.classList.add(step)\n-      if (step == 'krest') {\n-        item.innerText = \"x\"\n-      }\n-      if (step == 'circle') {\n-        item.innerText = \"0\"\n-      }\n-    }\n-    counter++;\n-    who()\n-\n-  })\n-\n-})\n-let win = \n-[\n-  [0,1,2]\n-  [0,4,8]\n-  [2,4,6]\n-  [3,4,5]\n-  [6,7,8]\n-  [0,3,6]\n-  [1,4,7]\n-  [2,5,8]\n-]\n-let circleWin = ()=>{\n-  for(let i = 0; i>win.length; i++){\n-    if (\n-    blockItem[win[i][0]].classList.contains('circle') &&\n-    blockItem[win[i][1]].classList.contains('circle') &&\n-    blockItem[win[i][2]].classList.contains('circle') \n-    ){\n-      blockItem[win[i][0]].classList.add('winColor') \n-      blockItem[win[i][1]].classList.add('winColor') \n-      blockItem[win[i][2]].classList.add('winColor')\n-\n-      winner = \"Нулики\"\n-      return 1\n-\n-    }\n-  }\n-}\n-\n-\n-let KrestWin = ()=>{\n-  for(let i = 0; i>win.length; i++){\n-    if (\n-    blockItem[win[i][0]].classList.contains('krest') &&\n-    blockItem[win[i][1]].classList.contains('krest') &&\n-    blockItem[win[i][2]].classList.contains('krest') \n-    ){\n-      blockItem[win[i][0]].classList.add('winColor') \n-      blockItem[win[i][1]].classList.add('winColor') \n-      blockItem[win[i][2]].classList.add('winColor')\n-\n-      winner = \"Крестики\"\n-      return 1\n-\n-    }\n-  }\n-}\n-let step = \"\";\n-\n-let spanWho = document.getElementById('spanWho')\n-let winner = ''\n-\n-const who = () => {\n-  if (step == 'circle') {\n-    step = 'krest';\n-    spanWho.innerText = 'Крестики'\n-  } else {\n-    step = 'circle'\n-    spanWho.innerText = 'Нулики'\n-  }\n-}\n-who()\n-\n-let blockItem = document.querySelectorAll('.blockItem')\n-let counter = 0;\n-\n-blockItem.forEach((item) => {\n-  item.addEventListener('click', () => {\n-    if (!item.classList.contains('circle') && !item.classList.contains('krest')) {\n-      item.classList.add(step)\n-      if (step == 'krest') {\n-        item.innerText = \"x\"\n-      }\n-      if (step == 'circle') {\n-        item.innerText = \"0\"\n-      }\n-    }\n-    counter++;\n-    who()\n-\n-  })\n-\n-})\n-let win = \n-[\n-  [0,1,2]\n-  [0,4,8]\n-  [2,4,6]\n-  [3,4,5]\n-  [6,7,8]\n-  [0,3,6]\n-  [1,4,7]\n-  [2,5,8]\n-]\n-let circleWin = ()=>{\n-  for(let i = 0; i>win.length; i++){\n-    if (\n-    blockItem[win[i][0]].classList.contains('circle') &&\n-    blockItem[win[i][1]].classList.contains('circle') &&\n-    blockItem[win[i][2]].classList.contains('circle') \n-    ){\n-      blockItem[win[i][0]].classList.add('winColor') \n-      blockItem[win[i][1]].classList.add('winColor') \n-      blockItem[win[i][2]].classList.add('winColor')\n-\n-      winner\n-\n-    }\n-  }\n-}\n"
+                },
+                {
+                    "date": 1758470160056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -83,4 +83,8 @@\n \n     }\n   }\n }\n+\n+let noWin = () =>{\n+  if(!)\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758470323213,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,6 +85,6 @@\n   }\n }\n \n let noWin = () =>{\n-  if(!)\n+  if(!krestWin() && !circleWin() &&)\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758470389624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,6 +85,8 @@\n   }\n }\n \n let noWin = () =>{\n-  if(!krestWin() && !circleWin() &&)\n+  if(!krestWin() && !circleWin() && (counter >=9[\n+    winner = \"Ничья\"\n+  ]\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758470491650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -85,8 +85,10 @@\n   }\n }\n \n let noWin = () =>{\n-  if(!krestWin() && !circleWin() && (counter >=9[\n-    winner = \"Ничья\"\n-  ]\n-}\n\\ No newline at end of file\n+  if(!krestWin() && !circleWin() && (counter >=9)){\n+     winner = \"Ничья\"\n+  }\n+  \n+}\n+blockWinner\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758470555100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,5 +90,5 @@\n      winner = \"Ничья\"\n   }\n   \n }\n-blockWinner\n\\ No newline at end of file\n+blockWinner = document.getElementById(.)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758470599218,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,5 +90,5 @@\n      winner = \"Ничья\"\n   }\n   \n }\n-blockWinner = document.getElementById(.)\n\\ No newline at end of file\n+ let blockWinner = document.getElementById('.blokWinner')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758470617678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -90,5 +90,6 @@\n      winner = \"Ничья\"\n   }\n   \n }\n+ let blockWinner = document.getElementById('.blokWinner')\n  let blockWinner = document.getElementById('.blokWinner')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758470642153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,5 +91,5 @@\n   }\n   \n }\n  let blockWinner = document.getElementById('.blokWinner')\n- let blockWinner = document.getElementById('.blokWinner')\n\\ No newline at end of file\n+ let spanWin = document.getElementById('.spanWin')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758470659157,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,5 +91,6 @@\n   }\n   \n }\n  let blockWinner = document.getElementById('.blokWinner')\n+ let spanWin = document.getElementById('.spanWin')\n  let spanWin = document.getElementById('.spanWin')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758470708968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,5 +92,5 @@\n   \n }\n  let blockWinner = document.getElementById('.blokWinner')\n  let spanWin = document.getElementById('.spanWin')\n- let spanWin = document.getElementById('.spanWin')\n\\ No newline at end of file\n+ let btnNewGame = document.getElementById('.btnNewGame')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758470748900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,5 +92,6 @@\n   \n }\n  let blockWinner = document.getElementById('.blokWinner')\n  let spanWin = document.getElementById('.spanWin')\n+ let btnNewGame = document.getElementById('.btnNewGame')\n  let btnNewGame = document.getElementById('.btnNewGame')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758470761642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,5 +93,5 @@\n }\n  let blockWinner = document.getElementById('.blokWinner')\n  let spanWin = document.getElementById('.spanWin')\n  let btnNewGame = document.getElementById('.btnNewGame')\n- let btnNewGame = document.getElementById('.btnNewGame')\n\\ No newline at end of file\n+ let blockArea = document.getElementById('.blockArea')\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758470964956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -93,5 +93,10 @@\n }\n  let blockWinner = document.getElementById('.blokWinner')\n  let spanWin = document.getElementById('.spanWin')\n  let btnNewGame = document.getElementById('.btnNewGame')\n- let blockArea = document.getElementById('.blockArea')\n\\ No newline at end of file\n+ let blockArea = document.getElementById('.blockArea')\n+\n+ let endGame = (winner)=>{\n+    blockArea.style.pointerEvents = 'none';\n+    blockWinner.style.display = 'flex'\n+ }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758471108812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,103 @@\n+let step = \"\";\n+\n+let spanWho = document.getElementById('spanWho')\n+let winner = ''\n+\n+const who = () => {\n+  if (step == 'circle') {\n+    step = 'krest';\n+    spanWho.innerText = 'Крестики'\n+  } else {\n+    step = 'circle'\n+    spanWho.innerText = 'Нулики'\n+  }\n+}\n+who()\n+\n+let blockItem = document.querySelectorAll('.blockItem')\n+let counter = 0;\n+\n+blockItem.forEach((item) => {\n+  item.addEventListener('click', () => {\n+    if (!item.classList.contains('circle') && !item.classList.contains('krest')) {\n+      item.classList.add(step)\n+      if (step == 'krest') {\n+        item.innerText = \"x\"\n+      }\n+      if (step == 'circle') {\n+        item.innerText = \"0\"\n+      }\n+    }\n+    counter++;\n+    who()\n+    circleWin()\n+    krestWin()\n+\n+\n+  })\n+\n+})\n+let win = \n+[\n+  [0,1,2]\n+  [0,4,8]\n+  [2,4,6]\n+  [3,4,5]\n+  [6,7,8]\n+  [0,3,6]\n+  [1,4,7]\n+  [2,5,8]\n+]\n+let circleWin = ()=>{\n+  for(let i = 0; i>win.length; i++){\n+    if (\n+    blockItem[win[i][0]].classList.contains('circle') &&\n+    blockItem[win[i][1]].classList.contains('circle') &&\n+    blockItem[win[i][2]].classList.contains('circle') \n+    ){\n+      blockItem[win[i][0]].classList.add('winColor') \n+      blockItem[win[i][1]].classList.add('winColor') \n+      blockItem[win[i][2]].classList.add('winColor')\n+\n+      winner = \"Нулики\"\n+      return 1\n+\n+    }\n+  }\n+}\n+\n+\n+let krestWin = ()=>{\n+  for(let i = 0; i>win.length; i++){\n+    if (\n+    blockItem[win[i][0]].classList.contains('krest') &&\n+    blockItem[win[i][1]].classList.contains('krest') &&\n+    blockItem[win[i][2]].classList.contains('krest') \n+    ){\n+      blockItem[win[i][0]].classList.add('winColor') \n+      blockItem[win[i][1]].classList.add('winColor') \n+      blockItem[win[i][2]].classList.add('winColor')\n+\n+      winner = \"Крестики\"\n+      return 1\n+\n+    }\n+  }\n+}\n+\n+let noWin = () =>{\n+  if(!krestWin() && !circleWin() && (counter >=9)){\n+     winner = \"Ничья\"\n+  }\n+  \n+}\n+ let blockWinner = document.getElementById('.blokWinner')\n+ let spanWin = document.getElementById('.spanWin')\n+ let btnNewGame = document.getElementById('.btnNewGame')\n+ let blockArea = document.getElementById('.blockArea')\n+\n+ let endGame = (winner)=>{\n+    blockArea.style.pointerEvents = 'none';\n+    blockWinner.style.display = 'flex'\n+ }\n+ btnNewGame.addEventListener('click' ,()=> )\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758471126198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -99,5 +99,7 @@\n  let endGame = (winner)=>{\n     blockArea.style.pointerEvents = 'none';\n     blockWinner.style.display = 'flex'\n  }\n- btnNewGame.addEventListener('click' ,()=> )\n\\ No newline at end of file\n+ btnNewGame.addEventListener('click' ,()=>{\n+\n+ })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758471161214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -100,6 +100,6 @@\n     blockArea.style.pointerEvents = 'none';\n     blockWinner.style.display = 'flex'\n  }\n  btnNewGame.addEventListener('click' ,()=>{\n-\n+  document.location.reload()\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758471230500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,8 +87,9 @@\n \n let noWin = () =>{\n   if(!krestWin() && !circleWin() && (counter >=9)){\n      winner = \"Ничья\"\n+     endGame(winner)\n   }\n   \n }\n  let blockWinner = document.getElementById('.blokWinner')\n"
+                },
+                {
+                    "date": 1758471270852,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,8 +59,9 @@\n       blockItem[win[i][1]].classList.add('winColor') \n       blockItem[win[i][2]].classList.add('winColor')\n \n       winner = \"Нулики\"\n+      endGame(winner)\n       return 1\n \n     }\n   }\n@@ -78,8 +79,9 @@\n       blockItem[win[i][1]].classList.add('winColor') \n       blockItem[win[i][2]].classList.add('winColor')\n \n       winner = \"Крестики\"\n+      endGame(winner)\n       return 1\n \n     }\n   }\n"
+                },
+                {
+                    "date": 1758471343018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,8 +101,9 @@\n \n  let endGame = (winner)=>{\n     blockArea.style.pointerEvents = 'none';\n     blockWinner.style.display = 'flex'\n+    spanWin\n  }\n  btnNewGame.addEventListener('click' ,()=>{\n-  document.location.reload()\n+     document.location.reload()\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758471372784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,9 +101,9 @@\n \n  let endGame = (winner)=>{\n     blockArea.style.pointerEvents = 'none';\n     blockWinner.style.display = 'flex'\n-    spanWin\n+    spanWin.innerText = winner\n  }\n  btnNewGame.addEventListener('click' ,()=>{\n      document.location.reload()\n  })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758471594377,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,108 @@\n+let step = \"\";\n+\n+let spanWho = document.getElementById('spanWho')\n+let winner = ''\n+\n+const who = () => {\n+  if (step == 'circle') {\n+    step = 'krest';\n+    spanWho.innerText = 'Крестики'\n+  } else {\n+    step = 'circle'\n+    spanWho.innerText = 'Нулики'\n+  }\n+}\n+who()\n+\n+let blockItem = document.querySelectorAll('.blockItem')\n+let counter = 0;\n+\n+blockItem.forEach((item) => {\n+  item.addEventListener('click', () => {\n+    if (!item.classList.contains('circle') && !item.classList.contains('krest')) {\n+      item.classList.add(step)\n+      if (step == 'krest') {\n+        item.innerText = \"x\"\n+      }\n+      if (step == 'circle') {\n+        item.innerText = \"0\"\n+      }\n+    }\n+    counter++;\n+    who()\n+    circleWin()\n+    krestWin()\n+    noWin()\n+  })\n+\n+})\n+let win = \n+[\n+  [0,1,2]\n+  [0,4,8]\n+  [2,4,6]\n+  [3,4,5]\n+  [6,7,8]\n+  [0,3,6]\n+  [1,4,7]\n+  [2,5,8]\n+]\n+let circleWin = ()=>{\n+  for(let i = 0; i>win.length; i++){\n+    if (\n+    blockItem[win[i][0]].classList.contains('circle') &&\n+    blockItem[win[i][1]].classList.contains('circle') &&\n+    blockItem[win[i][2]].classList.contains('circle') \n+    ){\n+      blockItem[win[i][0]].classList.add('winColor') \n+      blockItem[win[i][1]].classList.add('winColor') \n+      blockItem[win[i][2]].classList.add('winColor')\n+\n+      winner = \"Нулики\"\n+      endGame(winner)\n+      return 1\n+\n+    }\n+  }\n+}\n+\n+\n+let krestWin = ()=>{\n+  for(let i = 0; i>win.length; i++){\n+    if (\n+    blockItem[win[i][0]].classList.contains('krest') &&\n+    blockItem[win[i][1]].classList.contains('krest') &&\n+    blockItem[win[i][2]].classList.contains('krest') \n+    ){\n+      blockItem[win[i][0]].classList.add('winColor') \n+      blockItem[win[i][1]].classList.add('winColor') \n+      blockItem[win[i][2]].classList.add('winColor')\n+\n+      winner = \"Крестики\"\n+      endGame(winner)\n+      return 1\n+\n+    }\n+  }\n+}\n+\n+let noWin = () =>{\n+  if(!krestWin() && !circleWin() && (counter >=9)){\n+     winner = \"Ничья\"\n+     endGame(winner)\n+  }\n+  \n+}\n+ let blockWinner = document.getElementById('.blokWinner')\n+ let spanWin = document.getElementById('.spanWin')\n+ let btnNewGame = document.getElementById('.btnNewGame')\n+ let blockArea = document.getElementById('.blockArea')\n+\n+ let endGame = (winner)=>{\n+    blockArea.style.pointerEvents = 'none';\n+    blockWinner.style.display = 'flex'\n+    spanWin.innerText = winner\n+ }\n+ btnNewGame.addEventListener('click' ,()=>{\n+     document.location.reload()\n+ })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1758471708974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -47,9 +47,9 @@\n   [1,4,7]\n   [2,5,8]\n ]\n let circleWin = ()=>{\n-  for(let i = 0; i>win.length; i++){\n+  for(let i = 0; i<win.length; i++){\n     if (\n     blockItem[win[i][0]].classList.contains('circle') &&\n     blockItem[win[i][1]].classList.contains('circle') &&\n     blockItem[win[i][2]].classList.contains('circle') \n@@ -67,9 +67,9 @@\n }\n \n \n let krestWin = ()=>{\n-  for(let i = 0; i>win.length; i++){\n+  for(let i = 0; i<win.length; i++){\n     if (\n     blockItem[win[i][0]].classList.contains('krest') &&\n     blockItem[win[i][1]].classList.contains('krest') &&\n     blockItem[win[i][2]].classList.contains('krest') \n"
+                },
+                {
+                    "date": 1758472177137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,15 +37,15 @@\n \n })\n let win = \n [\n-  [0,1,2]\n-  [0,4,8]\n-  [2,4,6]\n-  [3,4,5]\n-  [6,7,8]\n-  [0,3,6]\n-  [1,4,7]\n+  [0,1,2],\n+  [0,4,8],\n+  [2,4,6],\n+  [3,4,5],\n+  [6,7,8],\n+  [0,3,6],\n+  [1,4,7],\n   [2,5,8]\n ]\n let circleWin = ()=>{\n   for(let i = 0; i<win.length; i++){\n"
+                },
+                {
+                    "date": 1758472299736,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,108 @@\n+let step = \"\";\n+\n+let spanWho = document.getElementById('spanWho')\n+let winner = ''\n+\n+const who = () => {\n+  if (step == 'circle') {\n+    step = 'krest';\n+    spanWho.innerText = 'Крестики'\n+  } else {\n+    step = 'circle'\n+    spanWho.innerText = 'Нулики'\n+  }\n+}\n+who()\n+\n+let blockItem = document.querySelectorAll('.blockItem')\n+let counter = 0;\n+\n+blockItem.forEach((item) => {\n+  item.addEventListener('click', () => {\n+    if (!item.classList.contains('circle') && !item.classList.contains('krest')) {\n+      item.classList.add(step)\n+      if (step == 'krest') {\n+        item.innerText = \"x\"\n+      }\n+      if (step == 'circle') {\n+        item.innerText = \"0\"\n+      }\n+    }\n+    counter++;\n+    who()\n+    circleWin()\n+    krestWin()\n+    noWin()\n+  })\n+\n+})\n+let win = \n+[\n+  [0,1,2],\n+  [0,4,8],\n+  [2,4,6],\n+  [3,4,5],\n+  [6,7,8],\n+  [0,3,6],\n+  [1,4,7],\n+  [2,5,8]\n+]\n+let circleWin = ()=>{\n+  for(let i = 0; i<win.length; i++){\n+    if (\n+    blockItem[win[i][0]].classList.contains('circle') &&\n+    blockItem[win[i][1]].classList.contains('circle') &&\n+    blockItem[win[i][2]].classList.contains('circle') \n+    ){\n+      blockItem[win[i][0]].classList.add('winColor') \n+      blockItem[win[i][1]].classList.add('winColor') \n+      blockItem[win[i][2]].classList.add('winColor')\n+\n+      winner = \"Нулики\"\n+      endGame(winner)\n+      return 1\n+\n+    }\n+  }\n+}\n+\n+\n+let krestWin = ()=>{\n+  for(let i = 0; i<win.length; i++){\n+    if (\n+    blockItem[win[i][0]].classList.contains('krest') &&\n+    blockItem[win[i][1]].classList.contains('krest') &&\n+    blockItem[win[i][2]].classList.contains('krest') \n+    ){\n+      blockItem[win[i][0]].classList.add('winColor') \n+      blockItem[win[i][1]].classList.add('winColor') \n+      blockItem[win[i][2]].classList.add('winColor')\n+\n+      winner = \"Крестики\"\n+      endGame(winner)\n+      return 1\n+\n+    }\n+  }\n+}\n+\n+let noWin = () =>{\n+  if(!krestWin() && !circleWin() && (counter >=9)){\n+     winner = \"Ничья\"\n+     endGame(winner)\n+  }\n+  \n+}\n+ let blockWinner = document.getElementById('blokWinner')\n+ let spanWin = document.getElementById('spanWin')\n+ let btnNewGame = document.getElementById('btnNewGame')\n+ let blockArea = document.getElementById('blockArea')\n+\n+ let endGame = (winner)=>{\n+    blockArea.style.pointerEvents = 'none';\n+    blockWinner.style.display = 'flex'\n+    spanWin.innerText = winner\n+ }\n+ btnNewGame.addEventListener('click' ,()=>{\n+     document.location.reload()\n+ })\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1757954714015,
